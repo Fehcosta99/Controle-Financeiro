@@ -141,6 +141,11 @@ function calcularTotalGanhos() {
     totalGanhosEl.textContent = `R$ ${total.toFixed(2)}`;
 }
 
+function atualizarGanhosTotal() {
+    const total = ganhos.salario + ganhos.vale;
+    totalGanhosEl.textContent = `R$ ${total.toFixed(2)}`;
+}
 
+atualizarGanhosTotal();
 // Inicialização
 atualizarUI();

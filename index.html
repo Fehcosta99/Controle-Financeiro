@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicativo de Controle Financeiro para gerenciar ganhos e despesas de forma simples e prática.">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle Financeiro</h1>
+    </header>
+    <main>
+        <!-- Inserção de ganhos -->
+        <section id="ganhos">
+            <h2>Inserir Ganhos💲</h2>
+            <label for="salario">Salário/Mês:</label>
+            <input type="number" id="salario" placeholder="Salário/Mês" aria-label="Salário">
+            <label for="vale">Vales ou Outros Ganhos:</label>
+            <input type="number" id="vale" placeholder="Vales ou Outros Ganhos" aria-label="Vales">
+            <p>Total Ganhos: <span id="total-ganhos">R$ 0,00</span></p> <!-- Novo campo para total -->
+            <button id="salvar-ganhos">Salvar Ganhos</button>
+        </section>
+        
+
+        <!-- Inserção de despesas -->
+<section id="despesas">
+    <h2>Inserir Despesa💸</h2>
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" placeholder="Descrição" aria-label="Descrição da despesa">
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" placeholder="Valor" aria-label="Valor da despesa">
+    <button id="adicionar-despesa">Adicionar</button>
+    <div id="div-selecionar-todos">
+        <input type="checkbox" id="selecionar-todos" class="inline-checkbox">
+        <span>
+            Selecionar Todos
+        </span>
+    </div>
+ 
+    <ul id="lista-despesas"></ul>
+    <button id="excluir-selecionadas" class="oculto">Excluir Selecionadas</button>
+</section>
+
+        <!-- Relatório e gráficos -->
+        <section id="relatorio">
+            <h2>Resumo📃</h2>
+            <p>Total Gasto: <span id="total-gasto">R$ 0,00</span></p>
+            <button id="exportar-planilha">Exportar Planilha</button>
+            <div id="alerta-mes" class="oculto">⚠️ Atenção a virada do mês! Salve seus dados antes de continuar.</div>
+        </section>
+    </main>
+    <!-- Carrega os scripts ao final para melhor desempenho -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

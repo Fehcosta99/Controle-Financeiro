@@ -1,7 +1,6 @@
 // Variáveis
 const listaDespesas = document.getElementById("lista-despesas");
 const totalGastoEl = document.getElementById("total-gasto");
-const metaEconomiaEl = document.getElementById("meta-economia");
 const salarioInput = document.getElementById("salario");
 const valeInput = document.getElementById("vale");
 const btnExcluirSelecionadas = document.getElementById("excluir-selecionadas");
@@ -38,7 +37,6 @@ function atualizarUI() {
 
     // Atualiza elementos
     totalGastoEl.textContent = `R$ ${totalGasto.toFixed(2)}`;
-    metaEconomiaEl.textContent = `R$ ${metaEconomia.toFixed(2)}`;
 
     // Mostra ou oculta o botão de excluir selecionadas
     btnExcluirSelecionadas.style.display = selecionadas.size > 0 ? "block" : "none";
@@ -74,7 +72,7 @@ function removerDespesa(index) {
 // Salvar ganhos
 document.getElementById("salvar-ganhos").addEventListener("click", () => {
     const salario = parseFloat(salarioInput.value);
-    const vale = parseFloat(valeInput.value);
+    const vale = parseFloat(valeInput.value);f
 
     if (isValorValido(salario)) ganhos.salario = salario || 0;
     if (isValorValido(vale)) ganhos.vale = vale || 0;

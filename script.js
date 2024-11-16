@@ -72,7 +72,7 @@ function removerDespesa(index) {
 // Salvar ganhos
 document.getElementById("salvar-ganhos").addEventListener("click", () => {
     const salario = parseFloat(salarioInput.value);
-    const vale = parseFloat(valeInput.value);f
+    const vale = parseFloat(valeInput.value);
 
     if (isValorValido(salario)) ganhos.salario = salario || 0;
     if (isValorValido(vale)) ganhos.vale = vale || 0;
